@@ -92,8 +92,11 @@ public class Move {
         double angle = 0;
         for(int i = 0; i < e.size();i++) {
             //angle = angle + e.get(i)*0.005;
-            angle = e.get(i)*0.005;
-            if (Math.abs(angle) % index == 0) {
+            angle += e.get(i)*0.005;
+            if (Math.abs(angle) >index) {
+                System.out.println(angle);
+
+                angle=0;
                 //angle -=index;
                 count++;
             }
