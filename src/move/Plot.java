@@ -70,11 +70,35 @@ public class Plot extends ApplicationFrame{
     }
 
     public static void main(String[] args ) throws IOException {
+        ArrayList<Integer> smoothdatalist = new ArrayList<Integer>();
+        for(int a = 1; a < 10; a++) {
+            smoothdatalist.clear();
+            smoothdatalist.add(a);
+
+            System.out.println("Smooth data for Walking column: " + a + "\n" + Move.Smoothdataoutput("walk", smoothdatalist,0.9).get(0));
+
+        }
+        for(int b = 1;  b< 10; b++) {
+            smoothdatalist.clear();
+            smoothdatalist.add(b);
+
+            System.out.println("\nSmooth data for Turning column: " + b + "\n" + Move.Smoothdataoutput("turn", smoothdatalist,0.9).get(0));
+        }
+        for(int c = 1; c < 10; c++) {
+            smoothdatalist.clear();
+            smoothdatalist.add(c);
+            System.out.println("Smooth data for Walking and Turning column: " + c + "\n" + Move.Smoothdataoutput("w&t", smoothdatalist,0.9).get(0));
+        }
+
+
+
         ArrayList<Integer> runlist = new ArrayList<Integer>();
+
         runlist.add(2);
+        //System.out.println("Smooth data for Walking\n" + Move.Smoothdataoutput("walk", runlist,0.9));
         double step1 = Move.countingstep(Move.Smoothdataoutput("walk",runlist , 0.9).get(0));
         double step2 = Move.countingstep(Move.Smoothdataoutput("w&t",runlist , 0.9).get(0));
-        System.out.println("Step From Walking: " + step1
+        System.out.println("\nStep From Walking: " + step1
                 + "\nStep From Walking & turning: " +step2
                 + "\nTotal Step: " + (step1 + step2) +"\n" );
 

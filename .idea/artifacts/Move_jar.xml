@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Move:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Move_jar</output-path>
+    <root id="archive" name="Move_jar.jar">
+      <element id="archive" name="Move.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="D:/新建文件夹/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="Move" />
+      </element>
+      <element id="file-copy" path="$USER_HOME$/Desktop/jfreechart-1.0.19-demo.jar" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/jfreechart-1.0.19/lib/jcommon-1.0.23.jar" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/jfreechart-1.0.19/lib/jfreechart-1.0.19.jar" />
+    </root>
+  </artifact>
+</component>
