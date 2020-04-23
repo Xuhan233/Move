@@ -94,7 +94,7 @@ public class Move {
             //angle = angle + e.get(i)*0.005;
             angle += e.get(i)*0.005;
             if (Math.abs(angle) >index) {
-                System.out.println(angle);
+
 
                 angle=0;
                 //angle -=index;
